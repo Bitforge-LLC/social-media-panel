@@ -1,0 +1,128 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+generator zod {
+  provider               = "zod-prisma-types"
+  output                 = "./zod"
+  createInputTypes       = true
+  createModelTypes       = true
+  addInputTypeValidation = true
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model User {
+  id             String          @id() @default(cuid())
+  email          String          @unique()
+  name           String?
+  image          String?
+  emailVerified  DateTime?
+  role           Role            @default(USER)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt()
+  authenticators Authenticator[]
+  accounts       Account[]
+  posts          Post[]          @relation("BlogPosts")
+  comments       Comment[]       @relation("BlogComments")
+}
+
+model Account {
+  id                String  @id() @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Authenticator {
+  credentialID         String  @unique()
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+  user                 User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+}
+
+model Post {
+  id          String     @id() @default(cuid())
+  title       String
+  slug        String     @unique()
+  content     String
+  excerpt     String?
+  coverImage  String?
+  status      PostStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt()
+  authorId    String
+  author      User       @relation("BlogPosts", fields: [authorId], references: [id], onDelete: Cascade)
+  comments    Comment[]
+  tags        PostTag[]
+
+  @@index([authorId])
+  @@index([status])
+  @@index([publishedAt])
+}
+
+model Comment {
+  id        String   @id() @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt()
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User     @relation("BlogComments", fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([postId])
+  @@index([authorId])
+}
+
+model Tag {
+  id    String    @id() @default(cuid())
+  name  String    @unique()
+  slug  String    @unique()
+  posts PostTag[]
+}
+
+model PostTag {
+  postId String
+  tagId  String
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  tag    Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([postId, tagId])
+}

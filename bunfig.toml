@@ -1,0 +1,7 @@
+# Bun configuration for GitHub Packages authentication
+# See: https://bun.sh/docs/install/registries
+
+[install.scopes]
+# Configure GitHub Packages registry for @Bitforge-LLC scoped packages
+# Token is loaded from GITHUB_TOKEN environment variable in .env file
+"@Bitforge-LLC" = { token = "$GITHUB_TOKEN", url = "https://npm.pkg.github.com" }
