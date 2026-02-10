@@ -14,8 +14,8 @@ const UITestPage = () => {
           Testing @Bitforge-LLC/ui
         </Text>
         <Text>
-          This page tests that components from @Bitforge-LLC/ui (Hero UI
-          proxy) work correctly.
+          This page tests that components from @Bitforge-LLC/ui (Hero UI proxy)
+          work correctly.
         </Text>
 
         <Input label="Test Input" placeholder="Enter some text..." />
@@ -27,8 +27,8 @@ const UITestPage = () => {
         </Container>
 
         <Text size="sm" className="text-gray-600">
-          ✓ If you can see this page with styled components, @Bitforge-LLC/ui
-          is working!
+          ✓ If you can see this page with styled components, @Bitforge-LLC/ui is
+          working!
         </Text>
       </Container>
     </Container>

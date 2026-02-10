@@ -3,13 +3,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { type ReactNode } from "react";
 
+import "@Bitforge-LLC/devtools/styles";
+import "./globals.css";
+
 import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/navBar";
-
-import "@Bitforge-LLC/devtools/styles";
 import { AppProviders } from "@/providers";
-
-import "./globals.css";
 
 const geistSans = localFont({
   src: "../../public/fonts/GeistVF.woff",

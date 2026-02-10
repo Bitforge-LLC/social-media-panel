@@ -1,4 +1,4 @@
-import config from "@TheeCryptoChad/eslint";
+import config from "@Bitforge-LLC/eslint";
 
 export default [
   ...config,
