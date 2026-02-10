@@ -67,3 +67,5 @@ dev.db-journal
 .playwright-mcp/*
 
 .mcp.json
+# Auto-generated Zod schemas
+src/lib/db/zod/
