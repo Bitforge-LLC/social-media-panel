@@ -6,7 +6,7 @@ datasource db {
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["driverAdapters"]
+  previewFeatures = []
 }
 
 generator zod {
@@ -29,7 +29,7 @@ enum PostStatus {
 }
 
 model User {
-  id             String          @id() @default(cuid())
+  id             String          @id() @default(cuid(2))
   email          String          @unique()
   name           String?
   image          String?
@@ -44,7 +44,7 @@ model User {
 }
 
 model Account {
-  id                String  @id() @default(cuid())
+  id                String  @id() @default(cuid(2))
   userId            String  @map("user_id")
   type              String
   provider          String
@@ -77,7 +77,7 @@ model Authenticator {
 }
 
 model Post {
-  id          String     @id() @default(cuid())
+  id          String     @id() @default(cuid(2))
   title       String
   slug        String     @unique()
   content     String
@@ -98,7 +98,7 @@ model Post {
 }
 
 model Comment {
-  id        String   @id() @default(cuid())
+  id        String   @id() @default(cuid(2))
   content   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()
@@ -112,7 +112,7 @@ model Comment {
 }
 
 model Tag {
-  id    String    @id() @default(cuid())
+  id    String    @id() @default(cuid(2))
   name  String    @unique()
   slug  String    @unique()
   posts PostTag[]
