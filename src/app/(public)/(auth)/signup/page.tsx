@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Container, Input, Link, Text } from "@Bitforge-LLC/ui";
+import { Button, Section, Input, Link, Text } from "@Bitforge-LLC/ui";
 import { signIn } from "next-auth/react";
 import { type FormEvent, useCallback } from "react";
 import { useForm } from "react-hook-form";
@@ -41,14 +41,14 @@ const Page = () => {
   );
 
   return (
-    <Container className="h-full max-h-[500px] justify-evenly gap-6">
+    <Section className="h-full max-h-[500px] justify-evenly gap-6">
       <Text size="xl" className="font-semibold">
         Sign up for {env.NEXT_PUBLIC_PROJECT_NAME}
       </Text>
       <Text size="lg">
         Sign up to start using {env.NEXT_PUBLIC_PROJECT_NAME}
       </Text>
-      <Container as="form" onSubmit={handleFormSubmit} className="hug gap-6">
+      <Section as="form" onSubmit={handleFormSubmit} className="hug gap-6">
         <Input
           label="Email"
           labelPlacement="outside"
@@ -71,11 +71,11 @@ const Page = () => {
         <Button type="submit" isLoading={isSubmitting} className="">
           Create account
         </Button>
-      </Container>
+      </Section>
       <Text>
         Already have an account? <Link href="/login">Login</Link>
       </Text>
-    </Container>
+    </Section>
   );
 };
 

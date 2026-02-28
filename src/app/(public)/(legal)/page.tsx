@@ -1,7 +1,7 @@
-import { Container } from "@Bitforge-LLC/ui";
+import { Section } from "@Bitforge-LLC/ui";
 
 const LegalPage = () => {
-  return <Container>LegalPage</Container>;
+  return <Section>LegalPage</Section>;
 };
 
 export default LegalPage;

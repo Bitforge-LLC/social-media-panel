@@ -5,11 +5,13 @@ import {
   Button,
   Card,
   CardBody,
-  Container,
+  Section,
   Text,
   toast,
 } from "@Bitforge-LLC/ui";
-import { Fa, Io5, Si } from "@Bitforge-LLC/ui/icons";
+import { FaGithub, FaHeart, FaStar } from "@Bitforge-LLC/ui/icons/fa";
+import { IoHeart, IoRefresh, IoRocket, IoSettings, IoStar } from "@Bitforge-LLC/ui/icons/io5";
+import { SiNextdotjs, SiReact, SiTypescript } from "@Bitforge-LLC/ui/icons/si";
 import { useCallback } from "react";
 
 const TestPage = () => {
@@ -34,21 +36,21 @@ const TestPage = () => {
       {/* Icon Animations */}
       <Text size="xl">Icon Animations</Text>
       <Text size="base">Icons have built-in hover animations</Text>
-      <Container className="flex-row flex-wrap gap-6">
-        <Fa.FaGithub size={32} />
-        <Fa.FaHeart size={32} color="#f31260" />
-        <Fa.FaStar size={32} color="#f5a524" />
-        <Io5.IoRocket size={32} color="#006fee" />
-        <Io5.IoSettings size={32} />
-        <Si.SiNextdotjs size={32} />
-        <Si.SiReact size={32} color="#61dafb" />
-        <Si.SiTypescript size={32} color="#3178c6" />
-      </Container>
+      <Section className="flex-row flex-wrap gap-6">
+        <FaGithub size={32} />
+        <FaHeart size={32} color="#f31260" />
+        <FaStar size={32} color="#f5a524" />
+        <IoRocket size={32} color="#006fee" />
+        <IoSettings size={32} />
+        <SiNextdotjs size={32} />
+        <SiReact size={32} color="#61dafb" />
+        <SiTypescript size={32} color="#3178c6" />
+      </Section>
 
       {/* Hover Effects */}
       <Text size="xl">Hover Effects</Text>
       <Text size="base">Micro-interaction feedback</Text>
-      <Container className="flex-row flex-wrap gap-4">
+      <Section className="flex-row flex-wrap gap-4">
         <Animate hover="pop">
           <Card className="w-32">
             <CardBody className="text-center">
@@ -64,12 +66,12 @@ const TestPage = () => {
             </CardBody>
           </Card>
         </Animate>
-      </Container>
+      </Section>
 
       {/* Entrance Effects */}
       <Text size="xl">Entrance Effects</Text>
       <Text size="base">Reveal animations when scrolling into view</Text>
-      <Container className="flex-row flex-wrap gap-4">
+      <Section className="flex-row flex-wrap gap-4">
         <Animate entrance="fadeUp">
           <Card className="w-32">
             <CardBody className="text-center">
@@ -93,7 +95,7 @@ const TestPage = () => {
             </CardBody>
           </Card>
         </Animate>
-      </Container>
+      </Section>
 
       {/* Staggered Entrance */}
       <Text size="xl">Staggered Entrance</Text>
@@ -131,27 +133,27 @@ const TestPage = () => {
       <Animate entrance="scaleIn" className="flex flex-row gap-4">
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoStar size={24} color="#f5a524" />
+            <IoStar size={24} color="#f5a524" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoStar size={24} color="#f5a524" />
+            <IoStar size={24} color="#f5a524" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoStar size={24} color="#f5a524" />
+            <IoStar size={24} color="#f5a524" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoStar size={24} color="#f5a524" />
+            <IoStar size={24} color="#f5a524" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoStar size={24} color="#f5a524" />
+            <IoStar size={24} color="#f5a524" />
           </CardBody>
         </Card>
       </Animate>
@@ -167,17 +169,17 @@ const TestPage = () => {
       >
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoRefresh size={24} color="#006fee" />
+            <IoRefresh size={24} color="#006fee" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoRefresh size={24} color="#006fee" />
+            <IoRefresh size={24} color="#006fee" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoRefresh size={24} color="#006fee" />
+            <IoRefresh size={24} color="#006fee" />
           </CardBody>
         </Card>
       </Animate>
@@ -188,35 +190,35 @@ const TestPage = () => {
       <Animate entrance="scaleIn" hover="pop" className="flex flex-row gap-4">
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoHeart size={24} color="#f31260" />
+            <IoHeart size={24} color="#f31260" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoHeart size={24} color="#f31260" />
+            <IoHeart size={24} color="#f31260" />
           </CardBody>
         </Card>
         <Card className="w-24">
           <CardBody className="text-center">
-            <Io5.IoHeart size={24} color="#f31260" />
+            <IoHeart size={24} color="#f31260" />
           </CardBody>
         </Card>
       </Animate>
 
       {/* Animated Buttons */}
       <Text size="xl">Animated Buttons</Text>
-      <Container className="flex-row flex-wrap gap-4">
+      <Section className="flex-row flex-wrap gap-4">
         <Animate hover="pop">
           <Button color="primary">Pop</Button>
         </Animate>
         <Animate hover="jiggle">
           <Button color="secondary">Jiggle</Button>
         </Animate>
-      </Container>
+      </Section>
 
       {/* Toast Test */}
       <Text size="xl">Toast Test</Text>
-      <Container className="flex-row">
+      <Section className="flex-row">
         <Button color="success" variant="solid" onPress={handleSuccess}>
           Success Toast
         </Button>
@@ -229,7 +231,7 @@ const TestPage = () => {
         <Button color="primary" variant="solid" onPress={handleInfo}>
           Info Toast
         </Button>
-      </Container>
+      </Section>
     </>
   );
 };

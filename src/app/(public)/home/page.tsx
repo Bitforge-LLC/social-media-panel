@@ -1,51 +1,51 @@
 "use client";
 
-import { Button, Container, Image, Text } from "@Bitforge-LLC/ui";
-import Fa from "@Bitforge-LLC/ui/icons/fa";
-import Io5 from "@Bitforge-LLC/ui/icons/io5";
-import Si from "@Bitforge-LLC/ui/icons/si";
+import { Button, Section, Image, Text } from "@Bitforge-LLC/ui";
+import { FaCode, FaEthereum } from "@Bitforge-LLC/ui/icons/fa";
+import { IoLogoVercel } from "@Bitforge-LLC/ui/icons/io5";
+import { SiNextdotjs, SiSolana } from "@Bitforge-LLC/ui/icons/si";
 
 const Home = () => {
   return (
-    <Container className="gap-40 p-20">
-      <Container>
+    <Section className="gap-40 p-20">
+      <Section>
         <Text size="xl" className="text-center">
           Stop with the setup. <br />
           Start writing code.
         </Text>
 
         <Text size="lg">One spot to setup all your apps infrastructure.</Text>
-        <Container className="hug flex-row gap-4">
+        <Section className="hug flex-row gap-4">
           <Button className="rounded-full" color="primary">
             Start Building
           </Button>
           <Button className="rounded-full" variant="bordered">
             idek bruh
           </Button>
-        </Container>
+        </Section>
         <Image
           src="/images/sample-screenshot.png"
           alt="screenshot"
           width={800}
         />
-      </Container>
-      <Container>
+      </Section>
+      <Section>
         <Text size="xl">
           Trusted by teams at over 1,000 of the world&apos;s leading
           organizations
         </Text>
-        <Container className="hug flex-row gap-20">
-          <Si.SiSolana size={20} />
-          <Fa.FaEthereum size={20} />
-          <Io5.IoLogoVercel size={20} />
-          <Si.SiNextdotjs size={20} />
-          <Si.SiSolana size={20} />
-          <Fa.FaEthereum size={20} />
-          <Io5.IoLogoVercel size={20} />
-          <Si.SiNextdotjs size={20} />
-        </Container>
-      </Container>
-      <Container>
+        <Section className="hug flex-row gap-20">
+          <SiSolana size={20} />
+          <FaEthereum size={20} />
+          <IoLogoVercel size={20} />
+          <SiNextdotjs size={20} />
+          <SiSolana size={20} />
+          <FaEthereum size={20} />
+          <IoLogoVercel size={20} />
+          <SiNextdotjs size={20} />
+        </Section>
+      </Section>
+      <Section>
         <Text size="xl" className="text-center">
           Features that work for your future.
         </Text>
@@ -53,11 +53,11 @@ const Home = () => {
           Check out our amazing features and experience the power of Vaultflow
           for yourself.
         </Text>
-      </Container>
-      <Container className="hug flex-row items-center justify-between p-10">
-        <Container className="flex-1 gap-4">
+      </Section>
+      <Section className="hug flex-row items-center justify-between p-10">
+        <Section className="flex-1 gap-4">
           <Button className="" color="secondary" isIconOnly>
-            <Fa.FaCode size={20} />
+            <FaCode size={20} />
           </Button>
           <Text size="xl">Code collaboration</Text>
           <Text>
@@ -68,12 +68,12 @@ const Home = () => {
             makes it easy to collaborate and ensure that your data is consistent
             and reliable.
           </Text>
-        </Container>
-        <Container>
+        </Section>
+        <Section>
           <Image src="/images/sample-code.png" alt="screenshot" width={400} />
-        </Container>
-      </Container>
-      <Container className="hug gap-10 p-10 text-center">
+        </Section>
+      </Section>
+      <Section className="hug gap-10 p-10 text-center">
         <Text size="xl">
           Our powerful analytics provides invaluable insights.
         </Text>
@@ -86,8 +86,8 @@ const Home = () => {
         <Button className="rounded-full" variant="bordered">
           Start building
         </Button>
-      </Container>
-    </Container>
+      </Section>
+    </Section>
   );
 };
 

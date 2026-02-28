@@ -1,4 +1,4 @@
-import { Container, Text } from "@Bitforge-LLC/ui";
+import { Section, Text } from "@Bitforge-LLC/ui";
 import { type FC } from "react";
 
 const Page: FC = () => {
@@ -42,19 +42,19 @@ const Page: FC = () => {
   ];
 
   return (
-    <Container className="h-full w-full gap-4 self-center">
+    <Section className="h-full w-full gap-4 self-center">
       <Text size="xl" className="font-bold">
         Privacy Policy
       </Text>
       {privacyPolicy.map((item, index) => (
-        <Container key={index} className="px-0!">
+        <Section key={index} className="px-0!">
           <Text size="lg" className="font-bold">
             {item.header}
           </Text>
           <Text size="sm">{item.content}</Text>
-        </Container>
+        </Section>
       ))}
-    </Container>
+    </Section>
   );
 };
 

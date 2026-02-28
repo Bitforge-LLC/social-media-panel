@@ -1,6 +1,6 @@
 import { type IconType } from "@Bitforge-LLC/ui";
-import Fa from "@Bitforge-LLC/ui/icons/fa";
-import Fa6 from "@Bitforge-LLC/ui/icons/fa6";
+import { FaDiscord, FaTelegram } from "@Bitforge-LLC/ui/icons/fa";
+import { FaXTwitter } from "@Bitforge-LLC/ui/icons/fa6";
 
 type Link = {
   href: string;
@@ -11,17 +11,17 @@ type Link = {
 export const socials: Link[] = [
   {
     href: "https://x.com/TheeCryptoChad",
-    Icon: Fa6.FaXTwitter,
+    Icon: FaXTwitter,
     name: "X",
   },
   {
     href: "https://discord.com/users/267143910810320896",
-    Icon: Fa.FaDiscord,
+    Icon: FaDiscord,
     name: "Discord",
   },
   {
     href: "http://t.me/TheeCryptoChad",
-    Icon: Fa.FaTelegram,
+    Icon: FaTelegram,
     name: "Telegram",
   },
 ];

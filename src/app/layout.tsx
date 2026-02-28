@@ -1,4 +1,4 @@
-import { Container } from "@Bitforge-LLC/ui";
+import { Section } from "@Bitforge-LLC/ui";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { type ReactNode } from "react";
@@ -40,9 +40,9 @@ const RootLayout = ({
       >
         <AppProviders>
           <NavBar />
-          <Container className="min-h-screen items-center! border-red-500 pt-26">
-            <Container className="w-[90%]!">{children}</Container>
-          </Container>
+          <Section className="min-h-screen items-center! border-red-500 pt-26">
+            <Section card>{children}</Section>
+          </Section>
           <Footer />
         </AppProviders>
       </body>

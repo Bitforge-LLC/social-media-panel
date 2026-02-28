@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Divider, Text } from "@Bitforge-LLC/ui";
+import { Section, Divider, Text } from "@Bitforge-LLC/ui";
 import Link from "next/link";
 import { type FC } from "react";
 
@@ -11,25 +11,25 @@ const Footer: FC = () => {
   const copyright = `© ${new Date().getFullYear()}, Bitforge LLC`;
 
   return (
-    <Container as="footer" className="hug mt-auto text-neutral-200">
+    <Section as="footer" className="hug mt-auto text-neutral-200">
       <Divider />
-      <Container
+      <Section
         className="hug gap-2 md:flex-row"
         style={{
           paddingBlock: "1.5rem",
           paddingInline: "max(5vw, calc((100vw - 1280px) / 2))",
         }}
       >
-        <Container className="gap-2">
-          <Container className="hug flex-row gap-2">
+        <Section className="gap-2">
+          <Section className="hug flex-row gap-2">
             <Logo />
             <Text size="lg" className="mt-6">
               Bitforge
             </Text>
-          </Container>
-        </Container>
-        <Container className="flex-row justify-center gap-10">
-          <Container className="hug items-start gap-2">
+          </Section>
+        </Section>
+        <Section className="flex-row justify-center gap-10">
+          <Section className="hug items-start gap-2">
             <Text size="lg" className="font-semibold uppercase">
               socials
             </Text>
@@ -43,8 +43,8 @@ const Footer: FC = () => {
                 {social.name}
               </Link>
             ))}
-          </Container>
-          <Container className="hug items-start gap-2">
+          </Section>
+          <Section className="hug items-start gap-2">
             <Text size="lg" className="font-semibold uppercase">
               legal
             </Text>
@@ -53,9 +53,9 @@ const Footer: FC = () => {
                 {legal.name}
               </Link>
             ))}
-          </Container>
-        </Container>
-      </Container>
+          </Section>
+        </Section>
+      </Section>
       <Text
         size="sm"
         className="text-muted-foreground"
@@ -66,7 +66,7 @@ const Footer: FC = () => {
       >
         {copyright}
       </Text>
-    </Container>
+    </Section>
   );
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Container, Link } from "@Bitforge-LLC/ui";
+import { Button, Section, Link } from "@Bitforge-LLC/ui";
 
 const links = [
   { href: "/settings", label: "General" },
@@ -10,13 +10,13 @@ const links = [
 
 const SettingsNav = () => {
   return (
-    <Container className="hug gap-4">
+    <Section className="hug gap-4">
       {links.map((link, i) => (
         <Button key={i} variant="light" href={link.href} as={Link}>
           {link.label}
         </Button>
       ))}
-    </Container>
+    </Section>
   );
 };
 

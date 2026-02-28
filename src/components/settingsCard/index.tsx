@@ -1,4 +1,4 @@
-import { Container, Divider, Text } from "@Bitforge-LLC/ui";
+import { Section, Divider, Text } from "@Bitforge-LLC/ui";
 import { type FC, type ReactNode } from "react";
 
 type SettingsCardProps = {
@@ -17,7 +17,7 @@ const SettingsCard: FC<SettingsCardProps> = ({
   title,
 }) => {
   return (
-    <Container className="hug items-start gap-4 rounded-md border-1 border-gray-200 p-4">
+    <Section className="hug items-start gap-4 rounded-md border-1 border-gray-200 p-4">
       <Text size="xl" className="font-bold">
         {title}
       </Text>
@@ -25,11 +25,11 @@ const SettingsCard: FC<SettingsCardProps> = ({
       <Divider />
       {children}
       <Divider />
-      <Container className="w-full flex-row justify-between">
+      <Section className="w-full flex-row justify-between">
         <Text>{info}</Text>
         {Button}
-      </Container>
-    </Container>
+      </Section>
+    </Section>
   );
 };
 

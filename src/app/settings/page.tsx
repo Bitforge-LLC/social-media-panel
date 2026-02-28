@@ -1,12 +1,12 @@
 "use client";
 
-import { Button, Container, Divider } from "@Bitforge-LLC/ui";
+import { Button, Section, Divider } from "@Bitforge-LLC/ui";
 
 import { SettingsCard } from "@/components/settingsCard";
 
 const Settings = () => {
   return (
-    <Container className="gap-4">
+    <Section className="gap-4">
       <SettingsCard
         title="Avatar"
         description="This is your avatar.
@@ -34,7 +34,7 @@ Click on the avatar to upload a custom one from your files."
       >
         <Button>Delete Account</Button>
       </SettingsCard>
-    </Container>
+    </Section>
   );
 };
 

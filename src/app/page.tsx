@@ -1,11 +1,11 @@
 "use client";
 
-import { Container, Input } from "@Bitforge-LLC/ui";
+import { Section, Input } from "@Bitforge-LLC/ui";
 import { type FC } from "react";
 
 const Page: FC = () => {
   return (
-    <Container className="gap-4 p-8">
+    <Section className="gap-4 p-8">
       <Input
         label="Username"
         placeholder="Enter username"
@@ -13,7 +13,7 @@ const Page: FC = () => {
         showCharacterCount
       />
       <Input label="Email" placeholder="Enter email" type="email" />
-    </Container>
+    </Section>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Container } from "@Bitforge-LLC/ui";
+import { Section } from "@Bitforge-LLC/ui";
 import { type ReactNode } from "react";
 
 type LegalLayoutProps = {
@@ -7,11 +7,11 @@ type LegalLayoutProps = {
 
 const LegalLayout = ({ children }: LegalLayoutProps) => {
   return (
-    <Container className="h-screen w-screen justify-center bg-white p-10 text-black">
-      <Container className="max-w-[min(90vw,1280px)] items-center">
+    <Section className="h-screen w-screen justify-center bg-white p-10 text-black">
+      <Section className="max-w-[min(90vw,1280px)] items-center">
         {children}
-      </Container>
-    </Container>
+      </Section>
+    </Section>
   );
 };
 

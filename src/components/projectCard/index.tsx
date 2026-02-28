@@ -1,9 +1,9 @@
 "use client";
 
-import { Container, Link, Text } from "@Bitforge-LLC/ui";
-import Io from "@Bitforge-LLC/ui/icons/io";
-import Io5 from "@Bitforge-LLC/ui/icons/io5";
-import Md from "@Bitforge-LLC/ui/icons/md";
+import { Section, Link, Text } from "@Bitforge-LLC/ui";
+import { IoLogoGithub } from "@Bitforge-LLC/ui/icons/io";
+import { IoLogoVercel } from "@Bitforge-LLC/ui/icons/io5";
+import { MdCheckBoxOutlineBlank } from "@Bitforge-LLC/ui/icons/md";
 import { type FC } from "react";
 
 import { LinkButton } from "@/components/linkButton";
@@ -26,22 +26,22 @@ const ProjectCard: FC<ProjectCardProps> = ({
   vercelLink,
 }) => {
   return (
-    <Container
+    <Section
       as={Link}
       className="hug w-full cursor-pointer flex-row gap-4 p-4"
       href={`/projects/${id}`}
     >
-      <Container className="hug h-36 w-36 bg-slate-500" />
-      <Container className="hug items-start">
+      <Section className="hug h-36 w-36 bg-slate-500" />
+      <Section className="hug items-start">
         <Text size="lg" className="font-semibold">
           {name}
         </Text>
         <Text>{deploymentUrl}</Text>
-        <LinkButton link={githubLink} Icon={Io.IoLogoGithub} />
-        <LinkButton link={vercelLink} Icon={Io5.IoLogoVercel} />
-        <LinkButton link={neonLink} Icon={Md.MdCheckBoxOutlineBlank} />
-      </Container>
-    </Container>
+        <LinkButton link={githubLink} Icon={IoLogoGithub} />
+        <LinkButton link={vercelLink} Icon={IoLogoVercel} />
+        <LinkButton link={neonLink} Icon={MdCheckBoxOutlineBlank} />
+      </Section>
+    </Section>
   );
 };
 

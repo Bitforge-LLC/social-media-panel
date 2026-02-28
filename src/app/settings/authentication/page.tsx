@@ -1,8 +1,8 @@
-import { Container } from "@Bitforge-LLC/ui";
+import { Section } from "@Bitforge-LLC/ui";
 import { type FC } from "react";
 
 const Authentication: FC = () => {
-  return <Container>Authentication</Container>;
+  return <Section>Authentication</Section>;
 };
 
 export default Authentication;

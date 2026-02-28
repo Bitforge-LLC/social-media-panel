@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Container, Progress, Text } from "@Bitforge-LLC/ui";
+import { Button, Section, Progress, Text } from "@Bitforge-LLC/ui";
 import { useCallback, useState } from "react";
 
 import { useServer } from "@/lib/trpc/client";
@@ -49,17 +49,17 @@ export const StreamingDemo = () => {
   const isComplete = progress?.step === progress?.total;
 
   return (
-    <Container className="hug items-start gap-4 p-4">
-      <Container className="w-full flex-row items-center justify-between">
-        <Container className="hug items-start">
+    <Section className="hug items-start gap-4 p-4">
+      <Section className="w-full flex-row items-center justify-between">
+        <Section className="hug items-start">
           <Text size="base" className="font-semibold">
             Streaming Query Progress
           </Text>
           <Text size="sm" className="text-default-500">
             Real-time progress via httpBatchStreamLink + React Query
           </Text>
-        </Container>
-        <Container className="hug flex-row gap-2">
+        </Section>
+        <Section className="hug flex-row gap-2">
           {isComplete && (
             <Button color="default" variant="flat" onPress={handleReset}>
               Reset
@@ -73,23 +73,23 @@ export const StreamingDemo = () => {
           >
             {isFetching ? "Streaming..." : "Start Task"}
           </Button>
-        </Container>
-      </Container>
+        </Section>
+      </Section>
 
       {progress && (
-        <Container className="w-full items-start gap-2">
-          <Container className="w-full flex-row justify-between text-sm">
+        <Section className="w-full items-start gap-2">
+          <Section className="w-full flex-row justify-between text-sm">
             <Text className="font-medium">{progress.message}</Text>
             <Text className="text-default-500">
               Step {progress.step}/{progress.total}
             </Text>
-          </Container>
+          </Section>
           <Progress
             aria-label="Task progress"
             color={isComplete ? "success" : "primary"}
             value={(progress.step / progress.total) * 100}
           />
-        </Container>
+        </Section>
       )}
 
       {error && (
@@ -97,6 +97,6 @@ export const StreamingDemo = () => {
           Error: {error.message}
         </Text>
       )}
-    </Container>
+    </Section>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Text } from "@Bitforge-LLC/ui";
+import { Section, Text } from "@Bitforge-LLC/ui";
 
 type SimpleGreetingProps = {
   message: string;
@@ -8,9 +8,9 @@ type SimpleGreetingProps = {
 
 const SimpleGreeting = ({ message }: SimpleGreetingProps) => {
   return (
-    <Container className="hug p-4">
+    <Section className="hug p-4">
       <Text size="lg">{message}</Text>
-    </Container>
+    </Section>
   );
 };
 

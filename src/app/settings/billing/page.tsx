@@ -2,7 +2,7 @@
 
 import {
   Button,
-  Container,
+  Section,
   Modal,
   ModalBody,
   ModalContent,
@@ -22,7 +22,7 @@ const stripePromise = loadStripe(env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? "");
 const Billing = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   return (
-    <Container>
+    <Section>
       <SettingsCard
         title="Billing"
         description="Payments for domains, add-ons, and other usage are made using the default card."
@@ -51,7 +51,7 @@ const Billing = () => {
         </Modal>
         <Text size="xl">hello</Text>
       </SettingsCard>
-    </Container>
+    </Section>
   );
 };
 

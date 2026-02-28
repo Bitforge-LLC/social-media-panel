@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Container } from "@Bitforge-LLC/ui";
+import { Button, Section } from "@Bitforge-LLC/ui";
 import { type FC, useCallback } from "react";
 
 import { env } from "@/env";
@@ -20,7 +20,7 @@ const Projects: FC = () => {
   }, [projects]);
 
   return (
-    <Container>
+    <Section>
       {/* {projects?.map((project) => (
         <ProjectCard
           key={project.id}
@@ -33,7 +33,7 @@ const Projects: FC = () => {
         />
       ))} */}
       <Button onPress={handleTestLog}>test</Button>
-    </Container>
+    </Section>
   );
 };
 
