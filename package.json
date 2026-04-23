@@ -26,10 +26,10 @@
     "test:e2e:debug": "playwright test --debug"
   },
   "dependencies": {
-    "@Bitforge-LLC/crypto": "^0.0.32",
-    "@Bitforge-LLC/devtools": "^0.1.35",
-    "@Bitforge-LLC/email": "^0.1.6",
-    "@Bitforge-LLC/ui": "^0.2.28",
+    "@Bitforge-LLC/crypto": "^0.0.35",
+    "@Bitforge-LLC/devtools": "^0.1.38",
+    "@Bitforge-LLC/email": "^0.1.9",
+    "@Bitforge-LLC/ui": "^0.2.35",
     "@auth/prisma-adapter": "2.11.0",
     "@aws-sdk/client-s3": "^3.910.0",
     "@aws-sdk/s3-request-presigner": "^3.910.0",
@@ -59,9 +59,9 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@Bitforge-LLC/eslint": "^0.0.15",
+    "@Bitforge-LLC/eslint": "^0.0.17",
     "@Bitforge-LLC/prettier": "^0.0.3",
-    "@Bitforge-LLC/testing": "^0.0.7",
+    "@Bitforge-LLC/testing": "^0.0.10",
     "@Bitforge-LLC/tsconfig": "^0.0.3",
     "@next/eslint-plugin-next": "16",
     "@playwright/test": "^1.48.2",
