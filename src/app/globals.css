@@ -3,4 +3,3 @@
 @import "@Bitforge-LLC/ui/tailwind.css";
 
 /* Scan all workspace packages for Tailwind classes */
-@source "../../../../packages/shared/*/src/**/*.{ts,tsx}";

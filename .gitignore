@@ -45,8 +45,6 @@ yarn-error.log*
 next-env.d.ts
 
 # Package managers
-bun.lockb
-bun.lock
 pnpm-lock.yaml
 yarn.lock
 package-lock.json
